@@ -1,0 +1,140 @@
+:root {
+  --ink: #292d24;
+  --paper: #f2efe6;
+  --line: #ccc8bb;
+  --accent: #d9623d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  width: min(920px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+button {
+  padding: 11px 18px;
+  color: white;
+  background: var(--ink);
+  border: 0;
+  border-radius: 3px;
+  font: inherit;
+}
+
+.intro {
+  max-width: 690px;
+  padding: 90px 0 74px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 18px 0;
+  font-family: Georgia, serif;
+  font-size: clamp(52px, 9vw, 86px);
+  font-weight: 400;
+  line-height: 0.93;
+  letter-spacing: -4px;
+}
+
+.intro > p:last-child {
+  max-width: 500px;
+  color: #65675f;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.walks {
+  padding-bottom: 80px;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+}
+
+.section-title h2 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+.section-title span {
+  color: #77796f;
+  font-size: 13px;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 50px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.number,
+.distance {
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 13px;
+}
+
+article h3 {
+  margin: 0 0 5px;
+  font-size: 17px;
+}
+
+article p {
+  margin: 0;
+  color: #77796f;
+}
+
+@media (max-width: 560px) {
+  .intro {
+    padding-top: 64px;
+  }
+
+  h1 {
+    letter-spacing: -2px;
+  }
+
+  article {
+    grid-template-columns: 34px 1fr;
+  }
+
+  .distance {
+    display: none;
+  }
+}
